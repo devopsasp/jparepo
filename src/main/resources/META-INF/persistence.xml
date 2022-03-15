@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -9,30 +8,30 @@
              http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 
         version="2.0">
-        <persistence-unit  name="StudentPU">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>        
-          <properties>
+        <persistence-unit name="PetPU">
+           <provider>org.hibernate.ejb.HibernatePersistence</provider>
+             <properties>
+ <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5433/postgres"/>
 
-                        <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5433/postgres" />
+<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 
-                        <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+ <property name="hibernate.connection.username" value="postgres" />
 
-                        <property name="hibernate.connection.username" value="postgres" />
+   <property name="hibernate.connection.password" value="1234" />
+   
+   
+    <property name="hibernate.archive.autodetection" value="class" />
+    
+     <property name="hibernate.hbm2ddl.auto" value="create" />
+     
+       <property name="hibernate.show_sql" value="true" />
 
-                        <property name="hibernate.connection.password" value="1234" />
-
-                       <property name="hibernate.archive.autodetection" value="class" />
-
-                        <property name="hibernate.hbm2ddl.auto" value="create" />
-                        
-                        <property name="hibernate.show_sql" value="true" />
-
-                        <property name="hibernate.format_sql" value="true" />
-                        
-
-                </properties>
-          
+       <property name="hibernate.format_sql" value="true" />
+    
+    
+  </properties>
+        
         
         </persistence-unit>
-
-</persistence>
+        
+        </persistence>
