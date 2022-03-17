@@ -1,0 +1,18 @@
+    Case Study for practice in JPA 
+
+      The below given classes have to be created and configured as entity
+
+     public class Employee{
+    private String employeeName;
+    private String employeeAddress;
+        }
+
+   public class Department 
+ { 
+  private String departmentName;
+  private Employee manager;
+  private List<Employee> staffList;
+
+  
+ } 
+   

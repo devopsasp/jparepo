@@ -1,0 +1,52 @@
+CriteriaBuilder API
+
+#CriteriaBuilder interface  
+  #is used to construct 
+      #Criteria Queries
+      #Selections 
+      #Expressions
+      #Predicates
+      #Ordering
+
+
+   an instance of CriteriaBuilder is obtained using 
+    getCriteriaBuilder from EntityManager instance
+
+ #CriteriaQuery 
+  CriteriaQuery instance has to be created using 
+  criteriabuilder instance 
+
+ #Root instance is created from criteriaquery instance 
+  it is like a from clause in SQL or JPQL 
+  we use from method to return root instance 
+
+
+  select the root instance to criteriaquery using select 
+funtion of criteriaquery
+
+
+
+
+
+Creating Expression using CriteriaBuilder
+  equal
+  notequal
+  gt
+  ge 
+  lt
+  le
+  between
+  like
+
+
+
+
+
+
+
+
+
+
+
+
+
