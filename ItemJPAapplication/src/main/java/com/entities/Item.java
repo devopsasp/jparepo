@@ -5,6 +5,12 @@ import javax.persistence.*;
 public class Item {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE,generator="mytablegenerator")
+	@TableGenerator(name="mytablegenerator",table="itemtable",pkColumnName="mykey",
+	valueColumnName="seq_value"
+			
+			)
+	
 	private int itemId;
 	private String itemName;
 	private float price;
@@ -16,9 +22,9 @@ public class Item {
 	
 	
 	
-public Item(int itemId, String itemName, float price, int quantityAvailable, String city) {
+public Item( String itemName, float price, int quantityAvailable, String city) {
 		super();
-		this.itemId = itemId;
+	
 		this.itemName = itemName;
 		this.price = price;
 		this.quantityAvailable = quantityAvailable;
